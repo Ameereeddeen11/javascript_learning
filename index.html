@@ -1,12 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Learning JS</title>
+        <!--Importing Bootstrap CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     </head>
     <body>
-        
+        <br>
+        <div class="container">
+            <div class="row">
+                <h1>Start Learning JS</h1>
+            </div>
+            <div class="row">
+                <h4 id="index">Hello There :D</h4>
+                <h4 id="index-2" style="display: none;">It also can show some hiden element</h4>
+            </div>
+            <!--getElementById is a method which is looking for id of HTML element and make changes with them-->
+            <!--For example it is looking for id index and change the text of HTML element by using innerHTML-->
+            <button class="btn btn-outline-primary" onclick='document.getElementById("index").innerHTML = "JS can change HTML text or content"'>Click Here</button>
+            <!--It can change the style of the element by using .style.ect here it is color-->
+            <button class="btn btn-outline-primary" onclick="document.getElementById('index').style.color='red'">JS also can change color of html element</button>
+            <!--It can hide some element by using .style.display='none'-->
+            <button class="btn btn-outline-primary" onclick="document.getElementById('index').style.display='none'">It also can hide element</button>
+            <!--It can show some element by blocking the style="display:none" in the elements style-->
+            <button class="btn btn-outline-primary" onclick="document.getElementById('index-2').style.display='block'">Try me</button>
+            <!--This button is working by function that I created in index.js-->
+            <button class="btn btn-outline-primary" onclick="myFunction()">My Function</button>
+        </div>
+
+
+        <!--JS code is inserted between <script> and </script> tags. JS tags can be in head section or body section-->
+        <!--Or JS code can be in a file.js-->
+
+        <!--I created function in index.js file and here I am importing it-->
+        <script src="index.js"></script>
+
+        <!--Importing Bootstrap JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     </body>
 </html>
