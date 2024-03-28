@@ -17,3 +17,11 @@ relationship = false; // Boolean
 console.log(`Amir is ${m} years old, Ivi ${i} years old, a Rijini ${r} godina.`);
 console.log("variable m is " + typeof m, "variable i is " + typeof i, "variable i is " + typeof r);
 console.log(`Is Amir in a relationship? ${relationship}`); 
+
+document.getElementById("submit").onclick = function() {
+  wages = document.getElementById("wages").value;
+  const dph = document.getElementById("dph").value;
+  const insurance = 0.071;
+  income = wages - (wages * dph/100) - (wages * insurance);
+  document.getElementById("result").textContent = `Your income is ${income}!`;
+}

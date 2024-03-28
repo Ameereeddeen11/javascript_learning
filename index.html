@@ -29,8 +29,25 @@
             <button class="btn btn-outline-primary" onclick="document.getElementById('index-2').style.display='block'">Try me</button>
             <!--This button is working by function that I created in index.js-->
             <button class="btn btn-outline-primary" onclick="myFunction()">My Function</button>
+            
+            <div class="row my-5">
+                <h3>How to calculate income from wages</h3>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"> wages $</span>
+                    <input id="wages" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">DPH in your country</span>
+                    <input id="dph" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">%</span>
+                </div>
+                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="row my-3">
+                <h4 id="result"></h4>
+            </div>
         </div>
-
 
         <!--JS code is inserted between <script> and </script> tags. JS tags can be in head section or body section-->
         <!--Or JS code can be in a file.js-->
