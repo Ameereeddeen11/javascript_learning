@@ -85,7 +85,7 @@ triangleBtn.onclick = function(){
   document.getElementById("triangle-result").textContent = `Area of the triangle is ${area}`;
 }
 
-const decreaseBtn = document.getElementById("decreaseBtn");
+const decreaseBtn = document.getElementById("decreaseBtn"); 
 const increaseBtn = document.getElementById("increaseBtn");
 const resetBtn = document.getElementById("resetBtn");
 const value = document.getElementById("count");
