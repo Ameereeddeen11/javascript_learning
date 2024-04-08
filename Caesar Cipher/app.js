@@ -7,9 +7,8 @@ function start(){    // Function to start the encryption or decryption process
         } else if(document.getElementById("flexRadioDefault2").checked == true){  // Check if the decryption radio button is checked
             decrypt(text, key);  // Decrypt the text
         }
-    }
-    else{   // If the input text or key is invalid
-        document.getElementById("result").style.display = "none";
+    } else{   // If the input text or key is invalid
+        document.getElementById("result").style.display = "enter text and key";  // Display an alert
     }
 }
 
@@ -19,9 +18,9 @@ function encrypt(text, key){    // Function to encrypt the text
         var ascii = text.charCodeAt(i);  // Get the ASCII value of the character
         if(ascii >= 65 && ascii <= 90){  // Check if the character is an uppercase letter
             encrypted += String.fromCharCode((ascii - 65 + key) % 26 + 65);  // Encrypt the character
-        }else if(ascii >= 97 && ascii <= 122){  // Check if the character is a lowercase letter
+        } else if(ascii >= 97 && ascii <= 122){  // Check if the character is a lowercase letter
             encrypted += String.fromCharCode((ascii - 97 + key) % 26 + 97);  // Encrypt the character
-        }else{  // If the character is not a letter
+        } else{  // If the character is not a letter
             encrypted += text[i];  // Add the character as it is
         }
     }
@@ -35,9 +34,9 @@ function decrypt(text, key){    // Function to decrypt the text
         var ascii = text.charCodeAt(i);  // Get the ASCII value of the character
         if(ascii >= 65 && ascii <= 90){  // Check if the character is an uppercase letter
             decrypted += String.fromCharCode((ascii - 65 - key + 26) % 26 + 65);  // Decrypt the character
-        }else if(ascii >= 97 && ascii <= 122){  // Check if the character is a lowercase letter
+        } else if(ascii >= 97 && ascii <= 122){  // Check if the character is a lowercase letter
             decrypted += String.fromCharCode((ascii - 97 - key + 26) % 26 + 97);  // Decrypt the character
-        }else{  // If the character is not a letter
+        } else{  // If the character is not a letter
             decrypted += text[i];  // Add the character as it is
         }
     }
@@ -47,15 +46,15 @@ function decrypt(text, key){    // Function to decrypt the text
 }
 
 function validation(text, key){  // Function to validate the input text and key
-    if(text === ""){  // Check if the input text is empty
-        alert("Please enter text to encrypt"); // Display an alert
+    bool_text = Boolean(text);  // Convert the text to boolean
+    bool_key = Boolean(key);  // Convert the key to boolean
+    if(!(text && key)){  // Check if the input text is empty
+        alert("Please enter valid text or key to encrypt"); // Display an alert
         return false; // Return false
-    }else if(key === ""){  // Check if the input key is empty
-        alert("Please enter key to encrypt the text");  // Display an alert
-        return false;  // Return false
-    }else if(isNaN(key)){  // Check if the input key is not a number
+    } else if(isNaN(key)){  // Check if the input key is not a number
         alert("Please enter a valid key");  // Display an alert
         return false;  // Return false
+    } else {
+        return true; // Return true if the input text and key are valid
     }
-    return true; // Return true if the input text and key are valid
 }
