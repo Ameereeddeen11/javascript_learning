@@ -18,30 +18,6 @@ console.log(`Amir is ${m} years old, Ivi ${i} years old, a Rijini ${r} godina.`)
 console.log("variable m is " + typeof m, "variable i is " + typeof i, "variable i is " + typeof r);
 console.log(`Is Amir in a relationship? ${relationship}`); 
 
-document.getElementById("submit").onclick = function() {
-  wages = Number(document.getElementById("wages").value);
-  const dph = Number(document.getElementById("dph").value);
-  const insurance = 0.071;
-  if (validation(wages, dph) == false){
-    document.getElementById("result").textContent = "Please enter valid values!"
-  }
-  else{
-    income = wages - (wages * dph/100) - (wages * insurance);
-    document.getElementById("result").textContent = `Your income is ${income} !`;
-  }
-}
-
-function validation(wages, dph){
-  wages = Boolean(wages);
-  dph = Boolean(dph);
-  if (wages && dph) {
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
 const decreaseBtn = document.getElementById("decreaseBtn"); 
 const increaseBtn = document.getElementById("increaseBtn");
 const resetBtn = document.getElementById("resetBtn");

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate wage</title>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row d-flex justify-content-center">
+            <h3>How to calculate income from wages</h3>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Wages $</span>
+                <input id="wages" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">DPH in your country</span>
+                <input id="dph" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">%</span>
+            </div>
+            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <h4 id="result"></h4>
+        </div>
+    </div>
+</body>
+</html>
