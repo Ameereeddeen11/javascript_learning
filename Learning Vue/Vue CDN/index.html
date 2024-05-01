@@ -26,11 +26,13 @@
         </style>
     </head>
     <body>
-        <div id="app" v-cloak>
-            <h1>{{ hello }}</h1>
-            <input type="text" class="form-control" v-model="hello">
-            <div class="container my-5">
-                <div class="row">
+        <div class="container">
+            <div id="app" v-cloak>
+                <div class="row my-3">
+                    <h1>{{ hello }}</h1>
+                    <input type="text" class="form-control" v-model="hello">
+                </div>
+                <div class="row my-5">
                     <div class="col">
                         <button class="btn btn-primary" v-on:click="blueCard=!blueCard">Blue Card</button>
                         <div v-if="blueCard" id="blueCard" class="card my-3"></div>
@@ -40,7 +42,7 @@
                         <div v-if="redCard" id="redCard" class="card my-3"></div>
                     </div>
                 </div>
-            </div>
+            </div>  
         </div>
         <!--Import Vue JS-->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
