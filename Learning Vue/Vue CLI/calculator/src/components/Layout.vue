@@ -2,8 +2,8 @@
     <div class="container">
         <div class="calculator">
             <div class="row">
-                <div class="display">value</div>
-                <the-button></the-button>
+                <div class="display">{{ values }}</div>
+                <the-button display-value="F"></the-button>
             </div>
             <div class="row"></div>
             <div class="row"></div>
@@ -15,18 +15,24 @@
 
 <script>
 export default {
-    name: 'TheLayout'
+    name: 'TheLayout',
+    data() {
+        return {
+            values: '0'
+        }
+    }
 }
 </script>
 
 <style>
 .display {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: antiquewhite;
+    flex: 1;
+    font-size: 1.5rem;
     padding: .5em;
-    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    background: #DEF7EB;
+    justify-content: flex-end;
 }
 
 .container {
