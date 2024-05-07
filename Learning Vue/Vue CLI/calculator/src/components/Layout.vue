@@ -3,6 +3,7 @@
         <div class="calculator">
             <div class="row">
                 <div class="display">value</div>
+                <the-button></the-button>
             </div>
             <div class="row"></div>
             <div class="row"></div>
