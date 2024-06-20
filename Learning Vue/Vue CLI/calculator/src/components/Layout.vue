@@ -3,23 +3,33 @@
         <div class="calculator">
             <div class="row">
                 <div class="display">{{ values }}</div>
-                <the-button display-value="F"></the-button>
+                <the-button display-value="C"></the-button>
             </div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
+            <calculator-row
+                v-for="(row, index) of rows"
+                :key="'row' + (index + 1)"
+                :buttons="row"/>
         </div>
     </div>
 </template>
 
 <script>
+import CalculatorRow from '@/components/CalculatorRow.vue'
 export default {
     name: 'TheLayout',
     data() {
         return {
-            values: '0'
+            values: '0',
+            rows: [
+                ['7', '8', '9', '/'],
+                ['4', '5', '6', '*'],
+                ['1', '2', '3', '-'],
+                ['0', '.', '=', '+']
+            ]
         }
+    },
+    components: {
+        CalculatorRow
     }
 }
 </script>
